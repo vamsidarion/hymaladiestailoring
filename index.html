@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Hyma Ladies Tailoring</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth
+}
+
+body{
+font-family:Poppins,sans-serif;
+background:linear-gradient(#F7F0EA,#fff,#FCEEF2);
+overflow-x:hidden;
+color:#6e5056
+}
+
+nav{
+position:sticky;
+top:0;
+z-index:1000;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 7%;
+background:rgba(255,255,255,.75);
+backdrop-filter:blur(15px);
+border-bottom:1px solid rgba(0,0,0,.06)
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px
+}
+
+.logo-icon{
+width:50px;
+height:50px;
+border-radius:50%;
+background:#ffe3ec;
+display:flex;
+align-items:center;
+justify-content:center
+}
+
+.logo h2,
+h1,
+.heading{
+font-family:'Cormorant Garamond',serif
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none
+}
+
+nav a{
+text-decoration:none;
+color:#6e5056
+}
+
+.btn{
+padding:13px 24px;
+background:#C79D84;
+color:white;
+border-radius:16px
+}
+
+.hero{
+height:95vh;
+position:relative;
+display:flex;
+align-items:center;
+overflow:hidden;
+background:
+url('https://i.pinimg.com/1200x/6a/f6/3d/6af63d0f8dff8c521f70ee41a8d02c48.jpg')
+center/cover;
+}
+
+.hero:before{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(to right,
+rgba(18,8,8,.90),
+rgba(61,31,31,.55),
+transparent)
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+padding:0 7%;
+max-width:700px;
+color:white
+}
+
+.badge{
+display:inline-block;
+padding:12px 20px;
+border-radius:40px;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(10px);
+margin-bottom:30px
+}
+
+.hero h1{
+font-size:80px;
+line-height:1
+}
+
+.hero p{
+margin:25px 0;
+font-size:20px;
+line-height:1.8
+}
+
+.hero-buttons{
+display:flex;
+gap:15px;
+margin-top:30px;
+flex-wrap:wrap
+}
+
+.secondary{
+background:white;
+color:#6e5056
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+margin-top:40px
+}
+
+.stats div{
+background:rgba(255,255,255,.12);
+padding:18px;
+border-radius:25px;
+backdrop-filter:blur(15px);
+text-align:center
+}
+
+.section{
+padding:90px 7%
+}
+
+.heading{
+font-size:50px;
+text-align:center;
+margin-bottom:50px
+}
+
+.slider{
+display:flex;
+gap:20px;
+width:max-content;
+animation:slideLeft 24s linear infinite
+}
+
+.card{
+min-width:230px;
+text-align:center
+}
+
+.card img{
+width:230px;
+height:320px;
+object-fit:cover;
+border-radius:30px;
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+transition:.5s
+}
+
+.card img:hover{
+transform:scale(1.08)
+}
+
+@keyframes slideLeft{
+0%{transform:translateX(0)}
+100%{transform:translateX(-50%)}
+}
+
+details{
+background:white;
+margin-bottom:20px;
+border-radius:30px;
+padding:25px;
+box-shadow:0 10px 20px rgba(0,0,0,.08)
+}
+
+summary{
+font-size:30px;
+cursor:pointer;
+font-family:'Cormorant Garamond',serif
+}
+
+.service-item{
+padding:14px;
+margin-top:15px;
+background:#fff7fb;
+border-radius:16px
+}
+
+.blog-row{
+display:flex;
+gap:25px;
+overflow:hidden
+}
+
+.blog-card{
+background:white;
+width:330px;
+border-radius:30px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,.1)
+}
+
+.blog-card img{
+width:100%;
+height:260px;
+object-fit:cover
+}
+
+.blog-card div{
+padding:20px
+}
+
+.map-card{
+display:block;
+text-decoration:none;
+color:#6e5056;
+background:linear-gradient(to right,#f6e4dd,#f3d7d7);
+padding:80px;
+border-radius:35px;
+text-align:center;
+transition:.4s
+}
+
+.map-card:hover{
+transform:scale(1.02)
+}
+
+footer{
+background:#4d2d35;
+padding:70px 7%;
+color:white
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:40px
+}
+
+footer h3{
+margin-bottom:15px
+}
+
+.copy{
+margin-top:30px;
+padding-top:30px;
+border-top:1px solid rgba(255,255,255,.15);
+text-align:center;
+color:#ccc
+}
+
+@media(max-width:768px){
+
+nav ul{
+display:none
+}
+
+.hero h1{
+font-size:52px
+}
+
+.stats{
+grid-template-columns:1fr
+}
+}
+</style>
+</head>
+<body>
+
+<nav>
+
+<div class="logo">
+<div class="logo-icon">✿</div>
+<div>
+<h2>Hyma Ladies Tailoring</h2>
+<small>Elegant Tailoring for Modern Women</small>
+</div>
+</div>
+
+<ul>
+<li><a href="#services">Services</a></li>
+<li><a href="#designs">Designs</a></li>
+<li><a href="#blogs">Blogs</a></li>
+</ul>
+
+<a class="btn" href="https://wa.me/917981874827">
+Book
+</a>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<span class="badge">
+Luxury Stitching Experience
+</span>
+
+<h1>
+Hyma Ladies Tailoring
+</h1>
+
+<p>
+Elegant blouse stitching, traditional fashion designs and premium tailoring crafted with luxury aesthetics.
+</p>
+
+<div class="hero-buttons">
+
+<a class="btn" href="https://hymaladiestailoring.simplybook.me/v2/">
+Book Appointment
+</a>
+
+<a class="btn secondary" href="#designs">
+View Designs
+</a>
+
+</div>
+
+<div class="stats">
+<div>500+ Designs</div>
+<div>1000+ Clients</div>
+<div>Premium Finish</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="heading">
+MUST HAVE CATEGORIES
+</h2>
+
+<div style="overflow:hidden">
+
+<div class="slider">
+
+<div class="card">
+<img src="https://i.pinimg.com/736x/38/90/ee/3890eef855a9f0318f693f2312e92c42.jpg">
+<h3>SAREE BLOUSE</h3>
+</div>
+
+<div class="card">
+<img src="https://i.pinimg.com/736x/45/57/55/4557551ab572dd4c2cf7a9f1f00d41be.jpg">
+<h3>KURTI</h3>
+</div>
+
+<div class="card">
+<img src="https://i.pinimg.com/736x/5b/9f/d7/5b9fd7b47863e9ec9a30d29e426fa25d.jpg">
+<h3>LEHENGA</h3>
+</div>
+
+<div class="card">
+<img src="https://i.pinimg.com/736x/14/87/a9/1487a9eca22212083fe7243ceeb073b9.jpg">
+<h3>LONG FROCK</h3>
+</div>
+
+</div>
+</div>
+
+</section>
+
+<section id="services" class="section">
+
+<h2 class="heading">
+Our Services
+</h2>
+
+<details open>
+<summary>Tailoring</summary>
+<div class="service-item">✿ Blouse Stitching</div>
+<div class="service-item">✿ Dress Stitching</div>
+<div class="service-item">✿ Girls Pattu Langa Stitching</div>
+</details>
+
+<details>
+<summary>Saree Services</summary>
+<div class="service-item">✿ Saree Falls & Pico Stitching</div>
+<div class="service-item">✿ Saree Ironing</div>
+<div class="service-item">✿ Cotton Sarees Selling</div>
+</details>
+
+<details>
+<summary>Care & Repairs</summary>
+<div class="service-item">✿ Alterations</div>
+<div class="service-item">✿ Cloth Repairs</div>
+<div class="service-item">✿ Dress Ironing</div>
+</details>
+
+</section>
+
+<section id="blogs" class="section">
+
+<h2 class="heading">
+Blog Images
+</h2>
+
+<div class="blog-row slider">
+
+<div class="blog-card">
+<img src="https://i.pinimg.com/736x/87/06/69/870669bcae5ce08ef50ab1833d3f3816.jpg">
+<div><h3>Long Frock Ideas</h3></div>
+</div>
+
+<div class="blog-card">
+<img src="https://i.pinimg.com/736x/5c/ca/eb/5ccaebf67ad16700a6028652856c5656.jpg">
+<div><h3>Saree Styling Tips</h3></div>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<a class="map-card"
+href="https://maps.app.goo.gl/hyTXnejK3uHGQBrb6"
+target="_blank">
+
+<div style="font-size:70px">
+📍
+</div>
+
+<h2>
+Hyma Ladies Tailoring
+</h2>
+
+<p>
+Bhagat Singh Colony Road, Markapuram
+</p>
+
+<p style="margin-top:15px">
+Tap to Open Google Maps →
+</p>
+
+</a>
+
+</section>
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+<h3>Hyma Ladies Tailoring</h3>
+<p>Elegant Tailoring for Modern Women</p>
+</div>
+
+<div>
+<h3>Services</h3>
+<p>Blouse Stitching</p>
+<p>Dress Stitching</p>
+<p>Alterations</p>
+</div>
+
+<div>
+<h3>Contact</h3>
+<p>7981874827</p>
+<p>Markapuram</p>
+</div>
+
+</div>
+
+<div class="copy">
+© 2026 Hyma Ladies Tailoring ✨
+</div>
+
+</footer>
+
+</body>
+</html>
